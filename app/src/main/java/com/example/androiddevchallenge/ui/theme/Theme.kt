@@ -29,7 +29,8 @@ private val DarkColorPalette = darkColors(
     onPrimary = white,
     onSecondary = gray,
     onBackground = white,
-    onSurface = white_850
+    onSurface = white_850,
+    secondaryVariant = white, // 处理登录界面Login 字体颜色
 )
 
 private val LightColorPalette = lightColors(
@@ -40,7 +41,9 @@ private val LightColorPalette = lightColors(
     onPrimary = gray,
     onSecondary = white,
     onBackground = gray,
-    onSurface = gray
+    onSurface = gray,
+    secondaryVariant = pink_900, // 处理登录界面Login 字体颜色
+
 
     /* Other default colors to override
 background = Color.White,
