@@ -1,6 +1,7 @@
 package com.example.androiddevchallenge
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.compose.setContent
@@ -38,7 +39,7 @@ class LoginActivity : AppCompatActivity() {
 
 @Composable
 fun Login() {
-    Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colors.background) {
+    Surface(modifier = Modifier.fillMaxSize(), color = colors.background) {
 
         var email by remember { mutableStateOf("") }
         var password by remember { mutableStateOf("") }
@@ -110,7 +111,7 @@ fun Login() {
                         style = typography.body1,
                     )
                 },
-                colors = TextFieldDefaults.textFieldColors(
+                colors = TextFieldDefaults.textFieldColors( 
                     backgroundColor = Color.Transparent,
                     textColor = colors.onPrimary
                 ),
@@ -132,8 +133,12 @@ fun Login() {
 
             Spacer(modifier = Modifier.height(16.dp))
 
+            val context: Context = LocalContext.current
+
             Button(
-                onClick = {},
+                onClick = {
+                    context.startActivity(Intent(context, HomeActivity::class.java))
+                },
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(48.dp),
