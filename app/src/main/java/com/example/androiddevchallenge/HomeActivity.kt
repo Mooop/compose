@@ -159,3 +159,11 @@ fun DefaultPreview2() {
         Home()
     }
 }
+
+@Preview(widthDp = 360, heightDp = 640, showBackground = true)
+@Composable
+fun DefaultDarkPreview2() {
+    MyTheme(darkTheme = true) {
+        Home()
+    }
+}
